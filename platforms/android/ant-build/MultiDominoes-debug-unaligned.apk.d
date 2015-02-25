@@ -1,4 +1,4 @@
-C:\Users\Moataz\Desktop\Dominoes\platforms\android\ant-build\MultiDominoes-debug-unaligned.apk : \
-C:\Users\Moataz\Desktop\Dominoes\platforms\android\ant-build\MultiDominoes.ap_ \
-C:\Users\Moataz\Desktop\Dominoes\platforms\android\ant-build\classes.dex \
-C:\Users\Moataz\Desktop\Dominoes\platforms\android\CordovaLib\ant-build\classes.jar \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\MultiDominoes-debug-unaligned.apk : \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\MultiDominoes.ap_ \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes.dex \
+D:\MultiDominoes-Mobile\platforms\android\CordovaLib\ant-build\classes.jar \

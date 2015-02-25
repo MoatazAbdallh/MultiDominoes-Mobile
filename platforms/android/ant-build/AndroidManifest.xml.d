@@ -1,2 +1,2 @@
-C:\Users\Moataz\Desktop\Dominoes\platforms\android\ant-build\AndroidManifest.xml : \
-C:\Users\Moataz\Desktop\Dominoes\platforms\android\AndroidManifest.xml \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\AndroidManifest.xml : \
+D:\MultiDominoes-Mobile\platforms\android\AndroidManifest.xml \

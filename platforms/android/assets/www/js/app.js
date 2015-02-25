@@ -16,9 +16,6 @@ var app = angular.module('Dominoes', ['ionic', 'rgCacheView', 'ionic.contrib.ui.
           controller: 'discoverController',
           resolve:{
               deviceReady: function () {
-                  //var loc = $('html').injector().get("$location");
-                  //if (localStorage["fSettings"] != null)
-                  //    loc.path ("/main");
                   return deferred.promise();
               }
           }                     
@@ -26,36 +23,28 @@ var app = angular.module('Dominoes', ['ionic', 'rgCacheView', 'ionic.contrib.ui.
         .state('waiting', {
             url: "/waiting",
             templateUrl: "views/waiting.html",
-            controller: 'discoverController',
-            resolve: {
-                deviceReady: function () {
-                    return deferred.promise();
-                }
-            }
-
+            controller: 'waitingController'
         })
       .state('main', {
           url: "/main",
           templateUrl: "views/main.html",
-          controller: 'mainController',
-          resolve: {
-              deviceReady: function () {
-                  return deferred.promise();
-              }
-          }
-
+          controller: 'mainController'
       })
 }).config(['$ionicTabsConfig', function ($ionicTabsConfig) {
     // Override the Android platform default to add "tabs-striped" class to "ion-tabs" elements.
     $ionicTabsConfig.type = '';
 }]);
 
-app.controller('discoverController', ['$scope', '$ionicModal','$ionicLoading','$rootScope', function ($scope, $ionicModal,$ionicLoading,$rootScope) {
+app.controller('discoverController', ['$scope', '$ionicModal', '$ionicLoading', '$rootScope', '$state', function ($scope, $ionicModal, $ionicLoading, $rootScope, $state) {
     require(['js/controllers/discoverController'], function (discover) {
-        discover($scope, $ionicModal, $ionicLoading, $rootScope)
+        discover($scope, $ionicModal, $ionicLoading, $rootScope, $state)
     })
 }])
-
+app.controller('waitingController', ['$scope', '$ionicLoading', '$rootScope', '$state', function ($scope, $ionicLoading, $rootScope, $state) {
+    require(['js/controllers/waitingController'], function (waiting) {
+        waiting($scope, $ionicLoading, $rootScope, $state)
+    })
+}])
 app.controller('mainController', ['$scope', '$ionicPopup', '$ionicBackdrop', '$ionicLoading', '$rootScope', function ($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope) {
     require(['js/controllers/mainController'], function (main) {
         main($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope)
