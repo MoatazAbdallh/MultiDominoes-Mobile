@@ -23,6 +23,44 @@
             $scope.hideLoading();
             NativeBridge.alert(err.message);
         }
+        
+
+        $scope.discover = function () {
+            if ($scope.gameSettings.playerName && stringOnlyRegx.test($scope.gameSettings.playerName)){
+            $scope.showLoading("Discovering");
+            if (window.webapis.multiscreen.Device)
+                window.webapis.multiscreen.Device.search($scope.onSuccessFindLocal, $scope.onError);
+            }
+            else
+                NativeBridge.alert("Please enter your name", null, "Warning");
+        }
+        $scope.onSuccessFindLocal = function (devices) {
+            $scope.hideLoading();
+            if (devices.length > 0) {
+                $scope.devices = devices; //This our devices Model
+                $scope.modal.show();
+            }
+            else
+                NativeBridge.alert("Sorry No Devices Found", null, "Warning");
+            
+        }
+        $scope.selectDevice = function (device) {
+            $scope.showNormalLoading();
+            $scope.selectedDevice = device;
+            $scope.selectedDevice.getApplication("MultiDominoes", $scope.onGetApplication, $scope.onError);
+        }
+        $scope.onGetApplication = function (application) {
+            $scope.application = application;
+            if ($scope.application.lastKnownStatus !== "running") {
+                $scope.application.launch({ "launcher": "Mobile-Dominoes" }, $scope.onLaunchSuccess,$scope.onError);
+            } else {
+                $scope.selectedDevice.connectToChannel($scope.channelId, { name: $scope.gameSettings.playerName }, $scope.onConnect, $scope.onError);
+            }
+        }
+        $scope.onLaunchSuccess = function (application) {
+            console.log("App Has Been Launched");
+            $scope.selectedDevice.connectToChannel($scope.channelId, { name: $scope.gameSettings.playerName }, $scope.onConnect, $scope.onError);
+        }
         $scope.onConnect = function (channel) {
 
             $scope.modal.hide();
@@ -93,46 +131,6 @@
             });
 
         }
-
-        $scope.discover = function () {
-            if ($scope.gameSettings.playerName && stringOnlyRegx.test($scope.gameSettings.playerName)){
-            $scope.showLoading("Discovering");
-            if (window.webapis.multiscreen.Device)
-                window.webapis.multiscreen.Device.search($scope.onSuccessFindLocal, $scope.onError);
-            }
-            else
-                NativeBridge.alert("Please enter your name", null, "Warning");
-        }
-        $scope.onSuccessFindLocal = function (devices) {
-            $scope.hideLoading();
-            if (devices.length > 0) {
-                $scope.devices = devices; //This our devices Model
-                $scope.modal.show();
-            }
-            else
-                NativeBridge.alert("Sorry No Devices Found", null, "Warning");
-            
-        }
-        $scope.selectDevice = function (device) {
-            $scope.showNormalLoading();
-            $scope.selectedDevice = device;
-            $scope.selectedDevice.getApplication("MultiDominoes", $scope.onGetApplication, $scope.onError);
-        }
-        $scope.onGetApplication = function (application) {
-            $scope.application = application;
-            NativeBridge.toastshort($scope.channelId);
-            NativeBridge.alert(JSON.stringify($scope.selectedDevice))
-            if ($scope.application.lastKnownStatus !== "running") {
-                $scope.application.launch({ "launcher": "Mobile-Dominoes" }, $scope.onLaunchSuccess,$scope.onError);
-            } else {
-                $scope.selectedDevice.connectToChannel($scope.channelId, { name: $scope.gameSettings.playerName }, function () { NativeBridge.alert("Success connection to channel")}, $scope.onError);
-            }
-        }
-        $scope.onLaunchSuccess = function (application) {
-            console.log("App Has Been Launched");
-            $scope.selectedDevice.connectToChannel($scope.channelId, { name: $scope.gameSettings.playerName }, function () { NativeBridge.alert("Success connection to channel") }, $scope.onError);
-        }
-        
        
         $ionicModal.fromTemplateUrl('deviceList.html', {
             scope: $scope,
