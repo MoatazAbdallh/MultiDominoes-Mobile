@@ -25,8 +25,9 @@
         }
         
 
-        $scope.discover = function () {
-            if ($scope.gameSettings.playerName && stringOnlyRegx.test($scope.gameSettings.playerName)){
+        $scope.discover = function (myForm) {
+            if (myForm.$valid) {
+                $('#PlayerName').blur();
             $scope.showLoading("Discovering");
             if (window.webapis.multiscreen.Device)
                 window.webapis.multiscreen.Device.search($scope.onSuccessFindLocal, $scope.onError);
@@ -119,6 +120,16 @@
                         $rootScope.cardSuccessed[0].show = false;
                         $rootScope.cardsDisabledFlag = true;
                     }
+                }
+                if ($scope.data.type == "cardFailed") {
+                    $rootScope.cardFailed = _.filter($rootScope.cards, function (card, id) {
+                        return card.id == $scope.data.card.id
+                    }); 
+                    if ($scope.cardFailed) {
+                        $rootScope.cardFailed[0].show = true;
+                        $rootScope.cardsDisabledFlag = false;
+                    }
+                    NativeBridge.toastshort($scope.data.content);
                 }
                 if ($scope.data.type == "cardStatus") {
                     if ($scope.data.content == false)

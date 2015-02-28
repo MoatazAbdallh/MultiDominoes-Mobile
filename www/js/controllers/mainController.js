@@ -9,15 +9,26 @@
         }
         $scope.cardSwipedLeft = function (card) {
             console.log("Card Id: " + card.id + " Has been swipped left");
+            card.show = false; //hide the card untill you recieve response from TV
             $scope.sendCard(card, 'head');
         }
         $scope.cardSwipedRight = function (card) {
             console.log("Card Id: " + card.id + " Has been swipped right");
+            card.show = false; //hide the card untill you recieve response from TV
             $scope.sendCard(card, 'tail');
 
         }
         $scope.cardPartialSwipe = function (card) {
             console.log("card has been partial swipped");
         }
+        $scope.$watch('cardsDisabledFlag', function (newValue, oldValue) {
+            if (newValue == true){
+                $('.backdrop').css('visibility','visible')
+            }
+            else{
+                $('.backdrop').css('visibility', 'hidden')
+            }
+
+        });
     }
 })

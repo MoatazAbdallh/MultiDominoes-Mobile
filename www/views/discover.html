@@ -4,16 +4,19 @@
     <ion-content scroll="false" scrollbar-y="false" scrollbar-x="false" class="register">
         <div class="row logo"></div>
         <div class="row">
-            <label style="width:60%;margin-left:20%" class="item item-input item-stacked-label">
-                <span class="input-label">Player Name</span>
-                <input type="text" placeholder="John" data-ng-model="gameSettings.playerName" autofocus>
-            </label>
+            <form name="discoverForm" data-ng-submit="discover(discoverForm)" style="width:100%" novalidate>
+                <label style="width:60%;margin-left:20%" class="item item-input item-stacked-label" data-ng-class="discoverForm.playerName.$invalid && !discoverForm.playerName.$pristine ?'error' :'' ">
+                    <span class="input-label">Player Name</span>
+                    <input type="text" name="playerName" id="playerName" placeholder="John" data-ng-model="gameSettings.playerName" autofocus required>
+                </label>
+                <div>
+                    <button type="submit" style="margin-left:20%;margin-top:2%"  class="button button-large button-energized icon-right ion-search">
+                        Discover
+                    </button>
+                </div>
+            </form>
         </div>
-        <div>
-            <button style="margin-left:20%;margin-top:2%" data-ng-click="discover()" class="button button-large button-energized icon-right ion-search">
-                Discover
-            </button>
-        </div>
+       
 
     </ion-content>
     <script id="deviceList.html" type="text/ng-template">

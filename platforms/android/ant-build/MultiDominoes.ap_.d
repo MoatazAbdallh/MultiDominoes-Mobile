@@ -36,6 +36,7 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\img \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\index.html \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\collide.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\hammer.min.js \
@@ -171,6 +172,11 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\discoverCont
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\mainController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\settingsController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\waitingController.js \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\notification.js \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android\notification.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views\discover.html \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views\main.html \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views\waiting.html \
