@@ -139,6 +139,8 @@
                 if ($scope.data.type == "drawCard") {
                     if ($scope.data.flag == true)
                         $rootScope.enableDrawButton = true; //we use rootscope as i want cardsdisabledFlag to be update main.html view
+                    else
+                        $rootScope.enableDrawButton = false;
                 }
                 if ($scope.data.type == "passTurn") {
                     if ($scope.data.flag == true) {
