@@ -30,5 +30,12 @@
             }
 
         });
+        $scope.drawCard = function(){
+            $rootScope.channel.send(JSON.stringify({ type: "yDrawCard" }), $rootScope.target);
+        }
+        $scope.passTurn = function(){
+            $rootScope.channel.send(JSON.stringify({ type: "yPassTurn" }), $rootScope.target);
+
+        }
     }
 })

@@ -4,8 +4,13 @@
     <ion-content scroll="false" scrollbar-y="false" scrollbar-x="false" class="center">
         <div style="width:100%;text-align:center">
             <div class="row" style="margin-top:5%;margin-left:15%;width:60%" data-ng-show="enableDrawButton">
-                <button class="button button-block button-energized">
+                <button class="button button-block button-energized" ng-click="drawCard()">
                     Draw Card
+                </button>
+            </div>
+            <div class="row" style="margin-top:5%;margin-left:15%;width:60%" data-ng-show="enablePassButton">
+                <button class="button button-block button-energized" ng-click="passTurn()">
+                    Pass
                 </button>
             </div>
             <div class="row"  style="margin-top:15%;text-align:center">
