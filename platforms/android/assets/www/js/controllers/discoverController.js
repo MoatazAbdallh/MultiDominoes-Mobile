@@ -1,5 +1,5 @@
 ﻿define(function () {
-    return function ($scope, $ionicModal, $ionicLoading, $rootScope,$state) {
+    return function ($scope, $ionicModal, $ionicLoading, $rootScope, $state) {
         $scope.channelId = "com.espritsolutions.multidominoes";
         $rootScope.target = "host";
         var stringOnlyRegx = /^[A-Za-z0-9]+$/;
@@ -8,7 +8,7 @@
         $rootScope.connectionMsgs = [];
         $scope.showLoading = function (msg) {
             $ionicLoading.show({
-                template: '<img src="img/loading-large.gif" /><br/><h1>'+msg+'...</h1>'
+                template: '<img src="img/loading-large.gif" /><br/><h1>' + msg + '...</h1>'
             });
         }
         $scope.showNormalLoading = function () {
@@ -23,14 +23,15 @@
             $scope.hideLoading();
             NativeBridge.alert(err.message);
         }
-        
+
 
         $scope.discover = function (myForm) {
             if (myForm.$valid) {
-                $('#PlayerName').blur();
-            $scope.showLoading("Discovering");
-            if (window.webapis.multiscreen.Device)
-                window.webapis.multiscreen.Device.search($scope.onSuccessFindLocal, $scope.onError);
+                if (window.cordova && cordova.plugins.Keyboard)
+                    cordova.plugins.Keyboard.close();
+                $scope.showLoading("Discovering");
+                if (window.webapis.multiscreen.Device)
+                    window.webapis.multiscreen.Device.search($scope.onSuccessFindLocal, $scope.onError);
             }
             else
                 NativeBridge.alert("Please enter your name", null, "Warning");
@@ -43,7 +44,7 @@
             }
             else
                 NativeBridge.alert("Sorry No Devices Found", null, "Warning");
-            
+
         }
         $scope.selectDevice = function (device) {
             $scope.showNormalLoading();
@@ -53,7 +54,7 @@
         $scope.onGetApplication = function (application) {
             $scope.application = application;
             if ($scope.application.lastKnownStatus !== "running") {
-                $scope.application.launch({ "launcher": "Mobile-Dominoes" }, $scope.onLaunchSuccess,$scope.onError);
+                $scope.application.launch({ "launcher": "Mobile-Dominoes" }, $scope.onLaunchSuccess, $scope.onError);
             } else {
                 $scope.selectedDevice.connectToChannel($scope.channelId, { name: $scope.gameSettings.playerName }, $scope.onConnect, $scope.onError);
             }
@@ -124,25 +125,39 @@
                 if ($scope.data.type == "cardFailed") {
                     $rootScope.cardFailed = _.filter($rootScope.cards, function (card, id) {
                         return card.id == $scope.data.card.id
-                    }); 
+                    });
                     if ($scope.cardFailed) {
                         $rootScope.cardFailed[0].show = true;
-                        $rootScope.cardsDisabledFlag = false;
                     }
                     NativeBridge.toastshort($scope.data.content);
                 }
                 if ($scope.data.type == "cardStatus") {
                     if ($scope.data.content == false)
                         $rootScope.cardsDisabledFlag = true; //we use rootscope as i want cardsdisabledFlag to be update main.html view
+                        $('.backdrop').css('visibility', 'visible');
                 }
                 if ($scope.data.type == "drawCard") {
                     if ($scope.data.flag == true)
                         $rootScope.enableDrawButton = true; //we use rootscope as i want cardsdisabledFlag to be update main.html view
+                    else
+                        $rootScope.enableDrawButton = false;
+                }
+                if ($scope.data.type == "passTurn") {
+                    if ($scope.data.flag == true) {
+                        $rootScope.enablePassButton = true;
+                        $rootScope.enableDrawButton = false;
+                    }
+                }
+
+                if($scope.data.type == "drawedCard"){
+                   $scope.newCard= $scope.data.card;
+                    $scope.newCard.show =true;
+                    $rootScope.cards.push( $scope.newCard);
                 }
             });
 
         }
-       
+
         $ionicModal.fromTemplateUrl('deviceList.html', {
             scope: $scope,
             animation: 'slide-in-up'

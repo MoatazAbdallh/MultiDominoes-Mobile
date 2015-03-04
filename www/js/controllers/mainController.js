@@ -21,6 +21,15 @@
         $scope.cardPartialSwipe = function (card) {
             console.log("card has been partial swipped");
         }
+        $scope.cardStyling = function () {
+            console.log("Editing Margining")
+            var style={};
+            if ($scope.enablePassButton || $scope.enableDrawButton)
+                style['margin-top'] = '5%';
+            else
+                style['margin-top'] = '10%';
+            return style;
+        }
         $scope.$watch('cardsDisabledFlag', function (newValue, oldValue) {
             if (newValue == true){
                 $('.backdrop').css('visibility','visible')

@@ -172,7 +172,10 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\discoverCont
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\mainController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\settingsController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\waitingController.js \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\com.ionic.keyboard \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\com.ionic.keyboard\www \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\com.ionic.keyboard\www\keyboard.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\notification.js \

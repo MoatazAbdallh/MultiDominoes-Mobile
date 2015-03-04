@@ -34,7 +34,9 @@ var app = angular.module('Dominoes', ['ionic', 'rgCacheView', 'ionic.contrib.ui.
     // Override the Android platform default to add "tabs-striped" class to "ion-tabs" elements.
     $ionicTabsConfig.type = '';
 }]);
-
+app.run(['$ionicBackdrop','$rootScope',function ($ionicBackdrop,$rootScope) {
+    $rootScope.backDrop = $ionicBackdrop;
+}])
 app.controller('discoverController', ['$scope', '$ionicModal', '$ionicLoading', '$rootScope', '$state', function ($scope, $ionicModal, $ionicLoading, $rootScope, $state) {
     require(['js/controllers/discoverController'], function (discover) {
         discover($scope, $ionicModal, $ionicLoading, $rootScope, $state)

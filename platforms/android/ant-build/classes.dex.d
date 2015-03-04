@@ -6,6 +6,10 @@ D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R$string.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R$xml.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$1.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$2.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$3.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\nl\xservices\plugins\Toast$1.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\nl\xservices\plugins\Toast.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\org\apache\cordova\dialogs\Notification$1.class \

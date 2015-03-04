@@ -75,3 +75,7 @@ button, input, select, textarea {
   font-size: 30px;
   color: #ff7373;
   opacity: 0; }
+
+/*td-cards {
+	display: -webkit-inline-box !important;
+}*/

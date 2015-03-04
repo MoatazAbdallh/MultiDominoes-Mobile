@@ -21,5 +21,21 @@
         $scope.cardPartialSwipe = function (card) {
             console.log("card has been partial swipped");
         }
+        $scope.$watch('cardsDisabledFlag', function (newValue, oldValue) {
+            if (newValue == true){
+                $('.backdrop').css('visibility','visible')
+            }
+            else{
+                $('.backdrop').css('visibility', 'hidden')
+            }
+
+        });
+        $scope.drawCard = function(){
+            $rootScope.channel.send(JSON.stringify({ type: "yDrawCard" }), $rootScope.target);
+        }
+        $scope.passTurn = function(){
+            $rootScope.channel.send(JSON.stringify({ type: "yPassTurn" }), $rootScope.target);
+
+        }
     }
 })
