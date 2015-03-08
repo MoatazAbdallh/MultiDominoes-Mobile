@@ -1,5 +1,32 @@
 ﻿define(function () {
-    return function ($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope) {
+    return function ($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope, $ionicModal) {
+        $ionicModal.fromTemplateUrl('views/swipe.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function (modal) {
+            $scope.modal = modal;
+            $scope.showLeftImage = true;
+            $scope.showRightImage = true;
+            $scope.swipeCount = 0;
+            $scope.modal.show();
+
+        });
+        $scope.imageSwipedLeft = function (imgType) {
+            if (imgType == 'left')
+                $scope.showLeftImage = false
+            else
+                NativeBridge.toastshort("Swipe in the other direction");
+        }
+        $scope.imageSwipedRight = function (imgType) {
+            if (imgType == 'right')
+                $scope.showRightImage = false
+            else
+                NativeBridge.toastshort("Swipe in the other direction");
+        }
+        $scope.getScreenWidth = function () {
+            console.log("Screen Width "+ window.innerWidth)
+            return window.innerWidth;
+        }
         $scope.detectCard = function (card) {
             return "img/cards/" + card.r + card.l + ".png";
         }
@@ -38,6 +65,14 @@
                 $('.backdrop').css('visibility', 'hidden')
             }
 
+        });
+        $scope.$watch('showLeftImage', function (newValues, oldValues) {
+            if (newValues==false && !$scope.showRightImage)
+                $scope.modal.hide();
+        });
+        $scope.$watch('showRightImage', function (newValues, oldValues) {
+            if (newValues==false && !$scope.showLeftImage)
+                $scope.modal.hide();
         });
         $scope.drawCard = function(){
             $rootScope.channel.send(JSON.stringify({ type: "yDrawCard" }), $rootScope.target);

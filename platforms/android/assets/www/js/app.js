@@ -47,9 +47,9 @@ app.controller('waitingController', ['$scope', '$ionicLoading', '$rootScope', '$
         waiting($scope, $ionicLoading, $rootScope, $state)
     })
 }])
-app.controller('mainController', ['$scope', '$ionicPopup', '$ionicBackdrop', '$ionicLoading', '$rootScope', function ($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope) {
+app.controller('mainController', ['$scope', '$ionicPopup', '$ionicBackdrop', '$ionicLoading', '$rootScope', '$ionicModal', function ($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope, $ionicModal) {
     require(['js/controllers/mainController'], function (main) {
-        main($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope)
+        main($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope, $ionicModal)
     })
 }])
 app.filter('removeUrl', function () {

@@ -20,13 +20,25 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.Keyboard"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.toast/www/Toast.js",
+        "id": "nl.x-services.plugins.toast.Toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.toast/test/tests.js",
+        "id": "nl.x-services.plugins.toast.tests"
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.dialogs": "0.3.0",
-    "com.ionic.keyboard": "1.0.4"
+    "com.ionic.keyboard": "1.0.4",
+    "nl.x-services.plugins.toast": "2.0.2"
 }
 // BOTTOM OF METADATA
 });

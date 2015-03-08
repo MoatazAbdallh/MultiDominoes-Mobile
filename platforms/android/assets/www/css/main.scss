@@ -6,7 +6,12 @@
 	width: 100%;
 	background-size: cover;
 }
-
+.smallmargin{
+margin-top:5% !important;
+}
+.largemargin{
+margin-top:15% !important
+}
 .disableCard {
 	filter: blur(4px);
 	-webkit-filter: blur(4px);

@@ -82,6 +82,15 @@ button, input, select, textarea {
   color: #ff7373;
   opacity: 0; }
 
+.col-60 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 60%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 60%; }
+
 /*td-cards {
 	display: -webkit-inline-box !important;
 }*/

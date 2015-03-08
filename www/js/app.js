@@ -30,6 +30,11 @@ var app = angular.module('Dominoes', ['ionic', 'rgCacheView', 'ionic.contrib.ui.
           templateUrl: "views/main.html",
           controller: 'mainController'
       })
+        .state('winning', {
+          url: "/winning",
+          templateUrl: "views/winning.html",
+          controller: 'winningController'
+      })
 }).config(['$ionicTabsConfig', function ($ionicTabsConfig) {
     // Override the Android platform default to add "tabs-striped" class to "ion-tabs" elements.
     $ionicTabsConfig.type = '';
@@ -47,9 +52,14 @@ app.controller('waitingController', ['$scope', '$ionicLoading', '$rootScope', '$
         waiting($scope, $ionicLoading, $rootScope, $state)
     })
 }])
-app.controller('mainController', ['$scope', '$ionicPopup', '$ionicBackdrop', '$ionicLoading', '$rootScope', function ($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope) {
+app.controller('winningController', ['$scope', '$ionicLoading', '$rootScope', '$state', function ($scope, $ionicLoading, $rootScope, $state) {
+    require(['js/controllers/winningController'], function (winning) {
+        winning($scope, $ionicLoading, $rootScope, $state)
+    })
+}])
+app.controller('mainController', ['$scope', '$ionicPopup', '$ionicBackdrop', '$ionicLoading', '$rootScope', '$ionicModal', function ($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope, $ionicModal) {
     require(['js/controllers/mainController'], function (main) {
-        main($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope)
+        main($scope, $ionicPopup, $ionicBackdrop, $ionicLoading, $rootScope, $ionicModal)
     })
 }])
 app.filter('removeUrl', function () {

@@ -70,17 +70,18 @@
 
             // Wire up some event handlers
             $rootScope.channel.on("disconnect", function (myClient) {
-                // app.updateConnectionStatus("disconnected");
                 $rootScope.channel = null;
+                NativeBridge.toastshort("Disconnected from channel, please discover again");
+                $rootScope.startFlag = false;
+                 $state.go('discover');
             });
 
             $rootScope.channel.on("clientConnect", function (client) {
                 $state.go('waiting');
-                // $scope.loc.path("/waiting");
             });
 
-            $rootScope.channel.on("clientDisconnect", function () {
-                //app.updateSendTargets();
+            $rootScope.channel.on("clientDisconnect", function (client) {
+                console.log(client.attributes.name + " has been disconnected");
             });
 
             $rootScope.channel.on("message", function (msg, client) {
@@ -111,6 +112,14 @@
                         $rootScope.cardsDisabledFlag = false;
                     if ($scope.data.content.indexOf("Sorry we have reached max. number of players") > -1)
                         NativeBridge.closeApp();
+                    if ($scope.data.content.indexOf("has been disconnected") > -1) {
+                        $rootScope.channel.disconnect(function () {
+                            NativeBridge.toastshort("Disconnected from channel, please discover again");
+                            $rootScope.startFlag = false;
+                        })
+                        $state.go('discover');
+
+                    }
                 }
 
                 if ($scope.data.type == "cardsuccessed") {
@@ -134,7 +143,7 @@
                 if ($scope.data.type == "cardStatus") {
                     if ($scope.data.content == false)
                         $rootScope.cardsDisabledFlag = true; //we use rootscope as i want cardsdisabledFlag to be update main.html view
-                        $('.backdrop').css('visibility', 'visible');
+                    $('.backdrop').css('visibility', 'visible');
                 }
                 if ($scope.data.type == "drawCard") {
                     if ($scope.data.flag == true)
@@ -149,10 +158,16 @@
                     }
                 }
 
-                if($scope.data.type == "drawedCard"){
-                   $scope.newCard= $scope.data.card;
-                    $scope.newCard.show =true;
-                    $rootScope.cards.push( $scope.newCard);
+                if ($scope.data.type == "drawedCard") {
+                    $scope.newCard = $scope.data.card;
+                    $scope.newCard.show = true;
+                    $rootScope.cards.push($scope.newCard);
+                }
+                if ($scope.data.type == "winner" && $scope.data.flag==true) {
+                    $state.go("winning")
+                }
+                if ($scope.data.type == "losser" && $scope.data.flag == true) {
+                    $state.go("waiting")
                 }
             });
 
