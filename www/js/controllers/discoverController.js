@@ -156,6 +156,8 @@
                         $rootScope.enablePassButton = true;
                         $rootScope.enableDrawButton = false;
                     }
+                    else
+                        $rootScope.enablePassButton = false;
                 }
 
                 if ($scope.data.type == "drawedCard") {
@@ -166,8 +168,8 @@
                 if ($scope.data.type == "winner" && $scope.data.flag==true) {
                     $state.go("winning")
                 }
-                if ($scope.data.type == "losser" && $scope.data.flag == true) {
-                    $state.go("waiting")
+                if ($scope.data.type == "winner" && $scope.data.flag == false) {
+                    $state.go("loser")
                 }
             });
 
