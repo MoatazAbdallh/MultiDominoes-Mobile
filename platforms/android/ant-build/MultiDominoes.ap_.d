@@ -1,31 +1,15 @@
 D:\MultiDominoes-Mobile\platforms\android\ant-build\MultiDominoes.ap_ \
  : D:\MultiDominoes-Mobile\platforms\android\res\drawable\icon.png \
 D:\MultiDominoes-Mobile\platforms\android\res\drawable-hdpi\icon.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-land-hdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-land-ldpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-land-mdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-land-xhdpi\screen.png \
 D:\MultiDominoes-Mobile\platforms\android\res\drawable-ldpi\icon.png \
 D:\MultiDominoes-Mobile\platforms\android\res\drawable-mdpi\icon.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-port-hdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-port-ldpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-port-mdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\res\drawable-port-xhdpi\screen.png \
 D:\MultiDominoes-Mobile\platforms\android\res\drawable-xhdpi\icon.png \
 D:\MultiDominoes-Mobile\platforms\android\res\values\strings.xml \
 D:\MultiDominoes-Mobile\platforms\android\res\xml\config.xml \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable\icon.png \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-hdpi\icon.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-land-hdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-land-ldpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-land-mdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-land-xhdpi\screen.png \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-ldpi\icon.png \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-mdpi\icon.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-port-hdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-port-ldpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-port-mdpi\screen.png \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-port-xhdpi\screen.png \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
 D:\MultiDominoes-Mobile\platforms\android\assets\www \
 D:\MultiDominoes-Mobile\platforms\android\assets\_where-is-www.txt \
@@ -90,15 +74,23 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\css\discover.min.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\discover.scss \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\fonts \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\index.css \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\loser.css \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\loser.min.css \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\loser.scss \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\main.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\main.min.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\main.scss \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\swipe.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\swipe.min.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\swipe.scss \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\waiting - Copy.css \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\waiting - Copy.min.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\waiting.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\waiting.min.css \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\waiting.scss \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\winning.css \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\winning.min.css \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\css\winning.scss \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\fonts\beeserif \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\fonts\JF-Flat-regular.eot \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\css\fonts\JF-Flat-regular.ttf \
@@ -139,6 +131,7 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\img\loading-large.gif \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\img\Main-Back.png \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\img\swipeleft.png \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\img\swiperight.png \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\img\Winner-logo.png \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\img\cards\00.png \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\img\cards\10.png \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\img\cards\11.png \
@@ -174,10 +167,12 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\js\index.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\NativeBridge.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\aboutController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\discoverController.js \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\loserController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\mainController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\settingsController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\swipeController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\waitingController.js \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\winningController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\com.ionic.keyboard \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\nl.x-services.plugins.toast \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \
@@ -192,7 +187,9 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\notification.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\org.apache.cordova.dialogs\www\android\notification.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views\discover.html \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\views\loser.html \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views\main.html \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views\swipe.html \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\views\waiting.html \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\views\winning.html \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\AndroidManifest.xml \

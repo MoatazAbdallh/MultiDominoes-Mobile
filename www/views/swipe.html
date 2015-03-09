@@ -8,7 +8,7 @@
         <div style="margin-top:15%" class="row">
             <div class="col-50 leftswipe">
                 <td-cards style="margin-left:8%">
-                    <td-card on-destroy="cardDestroyed(card)" on-transition-left="imageSwipedLeft('left')" on-transition-right="imageSwipedRight('left')">
+                    <td-card on-destroy="cardDestroyed(card)" on-swipe-left="imageSwipedLeft('left')" on-transition-right="imageSwipedRight('left')">
                         <div class="no-text" style="display:none">Left</div>
                         <img data-ng-show="showLeftImage"  src="img/swipeleft.png" />
                         <div class="yes-text" style="display:none">Right</div>

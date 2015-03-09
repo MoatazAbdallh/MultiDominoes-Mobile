@@ -70,8 +70,10 @@
 
             // Wire up some event handlers
             $rootScope.channel.on("disconnect", function (myClient) {
-                // app.updateConnectionStatus("disconnected");
                 $rootScope.channel = null;
+                NativeBridge.toastshort("Disconnected from channel, please discover again");
+                $rootScope.startFlag = false;
+                 $state.go('discover');
             });
 
             $rootScope.channel.on("clientConnect", function (client) {
@@ -115,6 +117,7 @@
                             NativeBridge.toastshort("Disconnected from channel, please discover again");
                             $rootScope.startFlag = false;
                         })
+                        $scope.modal.hide();
                         $state.go('discover');
 
                     }
@@ -154,12 +157,20 @@
                         $rootScope.enablePassButton = true;
                         $rootScope.enableDrawButton = false;
                     }
+                    else
+                        $rootScope.enablePassButton = false;
                 }
 
                 if ($scope.data.type == "drawedCard") {
                     $scope.newCard = $scope.data.card;
                     $scope.newCard.show = true;
                     $rootScope.cards.push($scope.newCard);
+                }
+                if ($scope.data.type == "winner" && $scope.data.flag==true) {
+                    $state.go("winning")
+                }
+                if ($scope.data.type == "winner" && $scope.data.flag == false) {
+                    $state.go("loser")
                 }
             });
 

@@ -117,6 +117,7 @@
                             NativeBridge.toastshort("Disconnected from channel, please discover again");
                             $rootScope.startFlag = false;
                         })
+                        $scope.modal.hide();
                         $state.go('discover');
 
                     }
