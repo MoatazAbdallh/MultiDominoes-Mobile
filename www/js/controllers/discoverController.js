@@ -137,7 +137,7 @@
                         return card.id == $scope.data.card.id
                     });
                     if ($scope.cardFailed) {
-                        $rootScope.cardsDisabledFlag = true; //enable UI for Players Interaction
+                        $rootScope.cardsDisabledFlag = false; //enable UI for Players Interaction
                         $rootScope.cardFailed[0].show = true;
                     }
                     NativeBridge.toastshort($scope.data.content);

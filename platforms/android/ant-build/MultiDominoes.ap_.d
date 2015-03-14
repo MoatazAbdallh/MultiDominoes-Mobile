@@ -171,7 +171,6 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\discoverCont
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\loserController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\mainController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\settingsController.js \
-D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\swipeController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\waitingController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\js\controllers\winningController.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\plugins\com.ionic.keyboard \
