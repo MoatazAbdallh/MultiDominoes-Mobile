@@ -27,6 +27,7 @@ D:\MultiDominoes-Mobile\platforms\android\assets\www\components\hammer.min.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\ionic \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\jquery-1.9.0.min.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\jquery-2.1.1.min.js \
+D:\MultiDominoes-Mobile\platforms\android\assets\www\components\jquery-2.1.3.min.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\moment-with-langs.min.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\multiscreen-mobile-1.1.19.min.js \
 D:\MultiDominoes-Mobile\platforms\android\assets\www\components\require.js \

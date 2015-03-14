@@ -137,6 +137,7 @@
                         return card.id == $scope.data.card.id
                     });
                     if ($scope.cardFailed) {
+                        $rootScope.cardsDisabledFlag = true; //enable UI for Players Interaction
                         $rootScope.cardFailed[0].show = true;
                     }
                     NativeBridge.toastshort($scope.data.content);
@@ -164,6 +165,7 @@
                 if ($scope.data.type == "drawedCard") {
                     $scope.newCard = $scope.data.card;
                     $scope.newCard.show = true;
+                    $rootScope.cardsDisabledFlag = false; //enable UI for player interaction
                     $rootScope.cards.push($scope.newCard);
                 }
                 if ($scope.data.type == "winner" && $scope.data.flag==true) {

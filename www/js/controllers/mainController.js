@@ -11,6 +11,11 @@
             $scope.modal.show();
 
         });
+        $scope.showNormalLoading = function () {
+            $ionicLoading.show({
+                template: '<i class="icon ion-loading-a"></i> Connecting...'
+            });
+        }
         $scope.imageSwipedLeft = function (imgType) {
             if (imgType == 'left')
                 $scope.showLeftImage = false
@@ -35,13 +40,15 @@
             $rootScope.channel.send(JSON.stringify({ type: "playedcard", card: card,side:side }), $rootScope.target);
         }
         $scope.cardSwipedLeft = function (card) {
-            console.log("Card Id: " + card.id + " Has been swipped left");
+            //console.log("Card Id: " + card.id + " Has been swipped left");
             card.show = false; //hide the card untill you recieve response from TV
+            $rootScope.cardsDisabledFlag = true; //disable UI until you get response from TV
             $scope.sendCard(card, 'head');
         }
         $scope.cardSwipedRight = function (card) {
-            console.log("Card Id: " + card.id + " Has been swipped right");
+            //console.log("Card Id: " + card.id + " Has been swipped right");
             card.show = false; //hide the card untill you recieve response from TV
+            $rootScope.cardsDisabledFlag = true; //disable UI until you get response from TV
             $scope.sendCard(card, 'tail');
 
         }
@@ -74,10 +81,12 @@
             if (newValues==false && !$scope.showLeftImage)
                 $scope.modal.hide();
         });
-        $scope.drawCard = function(){
+        $scope.drawCard = function () {
+            $rootScope.cardsDisabledFlag = true; //disable UI until you get response from TV
             $rootScope.channel.send(JSON.stringify({ type: "yDrawCard" }), $rootScope.target);
         }
-        $scope.passTurn = function(){
+        $scope.passTurn = function () {
+            $rootScope.cardsDisabledFlag = true; //disable UI until you get response from TV
             $rootScope.channel.send(JSON.stringify({ type: "yPassTurn" }), $rootScope.target);
 
         }

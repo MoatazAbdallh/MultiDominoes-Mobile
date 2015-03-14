@@ -47,7 +47,7 @@
                 <div class="col-20"></div>
                 <div class="col-60" style="display:flex !important">
                     <td-cards data-ng-repeat="card in cards">
-                        <td-card on-destroy="cardDestroyed(card)" on-transition-left="cardSwipedLeft(card)" on-transition-right="cardSwipedRight(card)"  class="card-{{$index}}">
+                        <td-card on-destroy="cardDestroyed(card)" on-transition-left="cardSwipedLeft(card)" on-transition-right="cardSwipedRight(card)"      class="card-{{$index}}">
                             <div class="no-text" style="display:none">Left</div>
                             <img data-ng-show="card.show" src="{{'img/cards/'+card.r+card.l+'.png'}}" id="{{card.id}}" data-ng-click="sendCard(card,'head')" data-ng-class="cardsDisabledFlag ?'disableCard':'enableCard'" />
                             <div class="yes-text" style="display:none">Right</div>
