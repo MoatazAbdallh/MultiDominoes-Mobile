@@ -6,6 +6,8 @@
         $scope.gameSettings = {};
         $scope.loc = $('html').injector().get("$location");
         $rootScope.connectionMsgs = [];
+        $('.backdrop').css('visibility', 'hidden');
+        
         $scope.showLoading = function (msg) {
             $ionicLoading.show({
                 template: '<img src="img/loading-large.gif" /><br/><h1>' + msg + '...</h1>'
@@ -24,6 +26,7 @@
             NativeBridge.alert(err.message);
         }
 
+        $scope.hideLoading();
 
         $scope.discover = function (myForm) {
             if (myForm.$valid) {
@@ -73,6 +76,8 @@
                 $rootScope.channel = null;
                 NativeBridge.toastshort("Disconnected from channel, please discover again");
                 $rootScope.startFlag = false;
+                $scope.hideLoading();
+                $scope.modal.hide();
                  $state.go('discover');
             });
 
@@ -113,10 +118,11 @@
                     if ($scope.data.content.indexOf("Sorry we have reached max. number of players") > -1)
                         NativeBridge.closeApp();
                     if ($scope.data.content.indexOf("has been disconnected") > -1) {
-                        $rootScope.channel.disconnect(function () {
-                            NativeBridge.toastshort("Disconnected from channel, please discover again");
-                            $rootScope.startFlag = false;
-                        })
+                        //$rootScope.channel.disconnect(function () {
+                        //    NativeBridge.toastshort("Disconnected from channel, please discover again");
+                        //    $rootScope.startFlag = false;
+                        //})
+                        $scope.hideLoading();
                         $scope.modal.hide();
                         $state.go('discover');
 

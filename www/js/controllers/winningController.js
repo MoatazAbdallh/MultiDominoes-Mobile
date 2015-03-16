@@ -8,7 +8,7 @@
         $scope.hideLoading = function () {
             $ionicLoading.hide();
         }
-
+        $('.backdrop').css('visibility', 'hidden');
         $scope.continue = function () {
             $rootScope.channel.send(JSON.stringify({ type: "continuePlay", flag:true}), $rootScope.target);
         }
