@@ -1,3 +1,3 @@
 # view AndroidManifest.xml #generated:6
--keep class com.espritsolutions.MultiDominoes { <init>(...); }
+-keep class com.espritsolutions.multidominoes.MultiDominoes { <init>(...); }
 

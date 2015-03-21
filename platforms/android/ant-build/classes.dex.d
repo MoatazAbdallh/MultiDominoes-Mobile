@@ -1,11 +1,11 @@
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes.dex : \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\BuildConfig.class \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\MultiDominoes.class \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R$attr.class \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R$drawable.class \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R$string.class \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R$xml.class \
-D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\R.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\multidominoes\BuildConfig.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\multidominoes\MultiDominoes.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\multidominoes\R$attr.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\multidominoes\R$drawable.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\multidominoes\R$string.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\multidominoes\R$xml.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\espritsolutions\multidominoes\R.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$1.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$2.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$3.class \

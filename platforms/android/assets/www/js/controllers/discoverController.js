@@ -7,7 +7,6 @@
         $scope.loc = $('html').injector().get("$location");
         $rootScope.connectionMsgs = [];
         $('.backdrop').css('visibility', 'hidden');
-        
         $scope.showLoading = function (msg) {
             $ionicLoading.show({
                 template: '<img src="img/loading-large.gif" /><br/><h1>' + msg + '...</h1>'
@@ -26,7 +25,6 @@
             NativeBridge.alert(err.message);
         }
 
-        $scope.hideLoading();
 
         $scope.discover = function (myForm) {
             if (myForm.$valid) {

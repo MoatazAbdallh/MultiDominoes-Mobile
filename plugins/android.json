@@ -9,15 +9,15 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"Toast\"><param name=\"android-package\" value=\"nl.xservices.plugins.Toast\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -26,14 +26,14 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.espritsolutions"
-        },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.espritsolutions"
+            "PACKAGE_NAME": "com.espritsolutions.multidominoes"
         },
         "nl.x-services.plugins.toast": {
-            "PACKAGE_NAME": "com.espritsolutions"
+            "PACKAGE_NAME": "com.espritsolutions.multidominoes"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "com.espritsolutions.multidominoes"
         }
     },
     "dependent_plugins": {}
