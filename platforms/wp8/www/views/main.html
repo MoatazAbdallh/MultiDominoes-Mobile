@@ -1,0 +1,62 @@
+﻿<link href="css/main.css" rel="stylesheet" />
+<div style="overflow-x:hidden" data-ng-cloak class="main">
+
+    <ion-content scroll="false" scrollbar-y="false" scrollbar-x="false" class="center">
+        <div style="width:100%;text-align:center">
+            <div class="row" data-ng-show="enableDrawButton">
+                <div class="col-10"></div>
+                <div class="col-80">
+                    <button class="button button-block button-energized" ng-click="drawCard()">
+                        Draw Card
+                    </button>
+                </div>
+                <div class="col-10"></div>
+            </div>
+            <div class="row" data-ng-show="enablePassButton">
+                <div class="col-10"></div>
+                <div class="col-80">
+                    <button class="button button-block button-royal" ng-click="passTurn()">
+                        Pass
+                    </button>
+                </div>
+                <div class="col-10"></div>
+            </div>
+            <div class="row" data-ng-show="getScreenWidth()<=400" data-ng-class="enablePassButton||enableDrawButton?'smallmargin':'largemargin'" style="text-align:center">
+                <td-cards data-ng-repeat="card in cards">
+                    <td-card on-destroy="cardDestroyed(card)" on-transition-left="cardSwipedLeft(card)" on-transition-right="cardSwipedRight(card)" " class="card-{{$index}}">
+                        <div class="no-text" style="display:none">Left</div>
+                        <img data-ng-show="card.show" src="{{'img/cards/'+card.r+card.l+'.png'}}" id="{{card.id}}" data-ng-click="sendCard(card,'head')" data-ng-class="cardsDisabledFlag ?'disableCard':'enableCard'" />
+                        <div class="yes-text" style="display:none">Right</div>
+                    </td-card>
+                </td-cards>
+            </div>
+            <div class="row" data-ng-show="getScreenWidth()>400 && getScreenWidth()<800 " data-ng-class="enablePassButton||enableDrawButton?'smallmargin':'largemargin'" style="text-align:center">
+                <div class="col-10"></div>
+                <div class="col-80" style="display:flex !important">
+                    <td-cards data-ng-repeat="card in cards">
+                        <td-card on-destroy="cardDestroyed(card)" on-transition-left="cardSwipedLeft(card)" on-transition-right="cardSwipedRight(card)"  class="card-{{$index}}">
+                            <div class="no-text" style="display:none">Left</div>
+                            <img data-ng-show="card.show" src="{{'img/cards/'+card.r+card.l+'.png'}}" id="{{card.id}}" data-ng-click="sendCard(card,'head')" data-ng-class="cardsDisabledFlag ?'disableCard':'enableCard'" />
+                            <div class="yes-text" style="display:none">Right</div>
+                        </td-card>
+                    </td-cards>
+                </div>
+                <div class="col-10"></div>
+            </div>
+            <div class="row" data-ng-show="getScreenWidth()>=800"  data-ng-class="enablePassButton||enableDrawButton?'smallmargin':'largemargin'" style="text-align:center">
+                <div class="col-20"></div>
+                <div class="col-60" style="display:flex !important">
+                    <td-cards data-ng-repeat="card in cards">
+                        <td-card on-destroy="cardDestroyed(card)" on-transition-left="cardSwipedLeft(card)" on-transition-right="cardSwipedRight(card)"      class="card-{{$index}}">
+                            <div class="no-text" style="display:none">Left</div>
+                            <img data-ng-show="card.show" src="{{'img/cards/'+card.r+card.l+'.png'}}" id="{{card.id}}" data-ng-click="sendCard(card,'head')" data-ng-class="cardsDisabledFlag ?'disableCard':'enableCard'" />
+                            <div class="yes-text" style="display:none">Right</div>
+                        </td-card>
+                    </td-cards>
+                </div>
+                <div class="col-20"></div>
+            </div>
+        </div>
+    </ion-content>
+
+</div>

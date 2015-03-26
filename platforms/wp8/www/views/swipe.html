@@ -1,0 +1,30 @@
+﻿<link href="css/swipe.css" rel="stylesheet" />
+<div class="modal">
+    <header class="bar bar-header bar-positive">
+        <h1 class="title">Swipe Left & Right Demo</h1>
+        <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+    </header>
+    <content has-header="true" padding="true">
+        <div style="margin-top:15%" class="row">
+            <div class="col-50 leftswipe">
+                <td-cards style="margin-left:8%">
+                    <td-card on-destroy="cardDestroyed(card)" on-swipe-left="imageSwipedLeft('left')" on-transition-right="imageSwipedRight('left')">
+                        <div class="no-text" style="display:none">Left</div>
+                        <img data-ng-show="showLeftImage"  src="img/swipeleft.png" />
+                        <div class="yes-text" style="display:none">Right</div>
+                    </td-card>
+                </td-cards>
+            </div>
+
+            <div class="col-50 rightswipe" style="border-left:1px dashed">
+                <td-cards style="float:right;margin-right:8%;margin-top:1%;">
+                    <td-card on-destroy="cardDestroyed(card)" on-transition-left="imageSwipedLeft('right')" on-transition-right="imageSwipedRight('right')">
+                        <div class="no-text" style="display:none">Left</div>
+                        <img data-ng-show="showRightImage" src="img/swiperight.png" />
+                        <div class="yes-text" style="display:none">Right</div>
+                    </td-card>
+                </td-cards>
+            </div>
+        </div>
+    </content>
+</div>

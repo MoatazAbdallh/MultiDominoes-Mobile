@@ -1,0 +1,44 @@
+﻿.discover {
+    background-image: url('../img/Domino-Back.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.logo {
+    background-image: url('../img/Domino-Logo.png');
+    width: 45%;
+    height: 37%;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item-stacked-label input, .item-stacked-label textarea {
+    background-color: transparent !important;
+}
+
+.button-large {
+    min-width: 60% !important;
+}
+
+.modal-backdrop {
+    z-index: 1000;
+}
+
+.backdrop {
+    z-index: 2000;
+}
+
+.loading-container {
+    z-index: 3000;
+}
+
+a.item {
+    color: #444 !important;
+}
+
+.error {
+    border-color: red;
+}
