@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Toast\"><param name=\"wp-package\" value=\"Toast\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"wp-package\" value=\"Notification\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "nl.x-services.plugins.toast": {
+            "PACKAGE_NAME": "{e1916e10-d179-11e4-97df-3302cd2525b2}"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "{e1916e10-d179-11e4-97df-3302cd2525b2}"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,37 @@
+﻿<link href="css/discover.css" rel="stylesheet" />
+<div style="overflow-x:hidden" data-ng-cloak class="discover">
+
+    <ion-content scroll="false" scrollbar-y="false" scrollbar-x="false" class="register">
+        <div class="row logo"></div>
+        <div class="row">
+            <form name="discoverForm" data-ng-submit="discover(discoverForm)" style="width:100%" novalidate>
+                <label style="width:60%;margin-left:20%" class="item item-input item-stacked-label" data-ng-class="discoverForm.playerName.$invalid && !discoverForm.playerName.$pristine ?'error' :'' ">
+                    <span class="input-label">Player Name</span>
+                    <input type="text" name="playerName" id="playerName" placeholder="eSprit Solutions" data-ng-model="gameSettings.playerName" autofocus required>
+                </label>
+                <div>
+                    <button type="submit" style="margin-left:20%;margin-top:2%"  class="button button-large button-energized icon-right ion-search">
+                        Discover
+                    </button>
+                </div>
+            </form>
+        </div>
+       
+
+    </ion-content>
+    <script id="deviceList.html" type="text/ng-template">
+        <div class="modal">
+            <header class="bar bar-header bar-positive">
+                <h1 class="title">Available Devices</h1>
+                <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+            </header>
+            <content  has-header="true" padding="true">
+                <div style="margin-top:7%" class="list">
+                    <a data-ng-repeat="device in devices" class="item"  data-ng-click="selectDevice(device)">
+                        {{device.name +"  ( "+ device.ip + " ) "}}
+                    </a>
+                </div>
+            </content>
+        </div>
+    </script>
+</div>
