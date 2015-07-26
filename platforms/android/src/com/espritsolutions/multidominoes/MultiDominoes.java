@@ -19,7 +19,10 @@
 
 package com.espritsolutions.multidominoes;
 
+
 import android.os.Bundle;
+
+
 import org.apache.cordova.*;
 
 public class MultiDominoes extends CordovaActivity
@@ -28,6 +31,7 @@ public class MultiDominoes extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+    
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
     }

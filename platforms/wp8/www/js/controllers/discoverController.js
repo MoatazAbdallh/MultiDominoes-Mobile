@@ -159,11 +159,15 @@
                 }
                 if ($scope.data.type == "passTurn") {
                     if ($scope.data.flag == true) {
+                        $rootScope.cardsDisabledFlag = false; //enable UI for player interaction
                         $rootScope.enablePassButton = true;
                         $rootScope.enableDrawButton = false;
                     }
-                    else
+                    else {
+                        $rootScope.cardsDisabledFlag = true; //enable UI for player interaction
                         $rootScope.enablePassButton = false;
+
+                    }
                 }
 
                 if ($scope.data.type == "drawedCard") {

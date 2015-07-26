@@ -15,6 +15,20 @@
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"wp-package\" value=\"Notification\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"wp-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_IDENTITY_DEVICE\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -26,6 +40,9 @@
             "PACKAGE_NAME": "{e1916e10-d179-11e4-97df-3302cd2525b2}"
         },
         "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "{e1916e10-d179-11e4-97df-3302cd2525b2}"
+        },
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "{e1916e10-d179-11e4-97df-3302cd2525b2}"
         }
     },
