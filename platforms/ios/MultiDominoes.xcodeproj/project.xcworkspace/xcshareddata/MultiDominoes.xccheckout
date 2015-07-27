@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>50A87C1F-5945-46F3-A08B-7DCED544F1CA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MultiDominoes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C769AE4C3C0F3082A1E22700EE8AD4F638C034D9</key>
+		<string>https://github.com/mo3taz-abdallh/MultiDominoes-Mobile-Assets.git</string>
+		<key>DA5AFEEF6249404325E94D2EFFCD3C6A49AED2B7</key>
+		<string>https://github.com/mo3taz-abdallh/MultiDominoes-Mobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/MultiDominoes.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C769AE4C3C0F3082A1E22700EE8AD4F638C034D9</key>
+		<string>../../../../../MultiDominoes-Mobile-Assets</string>
+		<key>DA5AFEEF6249404325E94D2EFFCD3C6A49AED2B7</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mo3taz-abdallh/MultiDominoes-Mobile.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DA5AFEEF6249404325E94D2EFFCD3C6A49AED2B7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DA5AFEEF6249404325E94D2EFFCD3C6A49AED2B7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MultiDominoes-Mobile</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C769AE4C3C0F3082A1E22700EE8AD4F638C034D9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MultiDominoes-Mobile-Assets</string>
+		</dict>
+	</array>
+</dict>
+</plist>

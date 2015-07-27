@@ -34,7 +34,12 @@
 html, body, [ng-view], .ng-scope, [ui-view], .container {
   height: 100%;
   font-family: JF Flat Regular !important;
-  color: #fff !important; }
+  color: #fff !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select:none;
+}
 
 button, input, select, textarea {
   font-family: JF Flat Regular !important; }
