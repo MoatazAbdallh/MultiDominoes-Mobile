@@ -1,0 +1,53 @@
+@import 'app';
+
+.main {
+	background-image: url('../img/Main-Back.png');
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+.smallmargin{
+margin-top:5% !important;
+}
+.largemargin{
+margin-top:15% !important
+}
+.disableCard {
+	filter: blur(4px);
+	-webkit-filter: blur(4px);
+}
+
+.enableCard {
+	filter: none;
+	-webkit-filter: blur(0px);
+}
+
+.yes-text {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 30px;
+	color: rgb(111, 250, 111);
+	opacity: 0;
+}
+
+.no-text {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 30px;
+	color: rgb(255, 115, 115);
+	opacity: 0;
+}
+.col-60{
+-webkit-box-flex: 0;
+  -webkit-flex: 0 0 60%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+/*td-cards {
+	display: -webkit-inline-box !important;
+}*/

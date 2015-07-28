@@ -17,21 +17,13 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
-    },
-    {
-        "file": "plugins/cordova-plugin-device/www/device.js",
-        "id": "cordova-plugin-device.device",
-        "clobbers": [
-            "device"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "nl.x-services.plugins.toast": "2.0.2",
-    "org.apache.cordova.dialogs": "0.3.0",
-    "cordova-plugin-device": "1.0.1"
+    "org.apache.cordova.dialogs": "0.3.0"
 }
 // BOTTOM OF METADATA
 });
