@@ -12,6 +12,7 @@ D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\I
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\nl\xservices\plugins\Toast$1.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\nl\xservices\plugins\Toast.class \
+D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\org\apache\cordova\device\Device.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\org\apache\cordova\dialogs\Notification$1.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\org\apache\cordova\dialogs\Notification$2$1.class \
 D:\MultiDominoes-Mobile\platforms\android\ant-build\classes\org\apache\cordova\dialogs\Notification$2$2.class \
