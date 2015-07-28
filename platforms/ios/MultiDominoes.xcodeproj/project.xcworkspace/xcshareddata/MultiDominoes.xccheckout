@@ -20,7 +20,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C769AE4C3C0F3082A1E22700EE8AD4F638C034D9</key>
-		<string>../../../../../MultiDominoes-Mobile-Assets</string>
+		<string>../../../..-Assets</string>
 		<key>DA5AFEEF6249404325E94D2EFFCD3C6A49AED2B7</key>
 		<string>../../../..</string>
 	</dict>
